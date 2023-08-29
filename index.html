@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <form>
+                <div>
+                    <label for="productName">product name</label>
+                    <input type="text" id="productName" class="form-control">
+                </div>
+                <div>
+                    <label for="productPrice">product price</label>
+                    <input type="text" id="productPrice" class="form-control">
+                </div>
+                <div>
+                    <label for="productCategory">product category</label>
+                    <select id="productCategory"class="form-select">
+                        <option value="phone">phone</option>
+                        <option value="laptop">laptop</option>
+                        <option value="tv">tv</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="productDescription">product description</label>
+                    <textarea id="productDescription" class="form-control"></textarea>
+                </div>
+                    <button type="button" id="addProduct" onclick="AddProduct()" class="btn btn-outline-info mt-2">add product</button>
+                    <button type="button" id="addedit" onclick="AddEdit()" style="display: none;" class="btn btn-outline-info mt-2">Add Edit</button>
+                    <button type="button" onclick="clearForm()" class="btn btn-outline-danger mt-2">clear form</button>
+            </form>
+        </div>
+        <div class="container-fluid">            
+            <input type="text" class="form-control w-50 mx-auto " placeholder="search..." id="searchButton" onkeyup="search()">
+                <table class="table table-center table-striped-columns table-bordered text-center m-2">
+                    <thead>
+                    <tr>
+                        <th>index</th>
+                        <th>productName</th>
+                        <th>product price</th>
+                        <th>product categoty</th>
+                        <th>product description</th>
+                        <th>update</th>
+                        <th>delete</th>
+                    </tr>
+                </thead>
+                    <tbody id="tableBody">                      
+                    </tbody>
+                </table>
+        </div>
+
+        <script src="main.js"></script>
+    </body>
+</html>
